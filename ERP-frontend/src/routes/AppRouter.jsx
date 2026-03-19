@@ -4,24 +4,19 @@ import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
 import Signup from "../pages/Signup";
 import ForgotPassword from "../pages/ForgotPassword";
+import ResetPassword from "../pages/ResetPassword";
 import ProtectedRoute from "./ProtectedRoute";
 
 function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-
-        {/* Landing Page */}
         <Route path="/" element={<Landing />} />
-
-        {/* Login Page */}
         <Route path="/login" element={<Login />} />
-
         <Route path="/signup" element={<Signup />} />
-
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
 
-        {/* Protected Dashboard */}
         <Route
           path="/dashboard"
           element={
@@ -30,7 +25,6 @@ function AppRouter() {
             </ProtectedRoute>
           }
         />
-
       </Routes>
     </BrowserRouter>
   );
