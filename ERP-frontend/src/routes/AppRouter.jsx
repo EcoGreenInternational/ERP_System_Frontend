@@ -6,6 +6,7 @@ import Signup from "../pages/Signup";
 import ForgotPassword from "../pages/ForgotPassword";
 import ResetPassword from "../pages/ResetPassword";
 import ProtectedRoute from "./ProtectedRoute";
+import PurchaseOrderPage from "../pages/PurchaseOrderPage"; // ✅ import
 
 function AppRouter() {
   return (
@@ -22,6 +23,16 @@ function AppRouter() {
           element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* ✅ Purchase Order route */}
+        <Route
+          path="/purchase-orders"
+          element={
+            <ProtectedRoute>
+              <PurchaseOrderPage />
             </ProtectedRoute>
           }
         />
