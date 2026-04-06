@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import ProductsPage from "./pages/ProductsPage";
 import SupplierPage from "./pages/SupplierPage";
 import { Toaster } from "sonner";
+import AppRouter from "./routes/AppRouter";
 
 const Dashboard = () => (
   <section>
@@ -16,6 +17,7 @@ const Dashboard = () => (
 
 export default function App() {
   return (
+    <AppRouter /> 
     <BrowserRouter>
       <div className="flex min-h-screen bg-gray-50">
         <Sidebar />
@@ -32,3 +34,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+ 
+export default App;
